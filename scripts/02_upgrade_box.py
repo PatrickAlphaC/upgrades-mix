@@ -5,6 +5,7 @@ from brownie import (
     ProxyAdmin,
     config,
     network,
+    Contract,
 )
 from scripts.helpful_scripts import get_account, upgrade
 
@@ -16,10 +17,11 @@ def main():
         {"from": account},
         publish_source=config["networks"][network.show_active()]["verify"],
     )
-    proxy = TransparentUpgradeableProxy[len(TransparentUpgradeableProxy) - 1]
-    proxy_admin = ProxyAdmin[len(ProxyAdmin) - 1]
+    proxy = TransparentUpgradeableProxy[-1]
+    proxy_admin = ProxyAdmin[-1]
     upgrade(account, proxy, box_v2, proxy_admin_contract=proxy_admin)
     print("Proxy has been upgraded!")
-    print(proxy.retrieve())
-    proxy.increment({"from": account})
-    print(proxy.retrieve())
+    proxy_box = Contract.from_abi("BoxV2", proxy.address, BoxV2.abi)
+    print(f"Starting value {proxy_box.retrieve()}")
+    proxy_box.increment({"from": account})
+    print(f"Ending value {proxy_box.retrieve()}")

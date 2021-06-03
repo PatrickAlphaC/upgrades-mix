@@ -17,7 +17,9 @@ networks:
   development:
     verify: False
   rinkeby:
-    verify: True
+    verify: False
+  ganache:
+    verify: False
 wallets:
   from_key: ${PRIVATE_KEY}
   from_mnemonic: ${MNEMONIC}
