@@ -3,7 +3,7 @@
 <br/>
 <p align="center">
 <a href="https://blog.openzeppelin.com/proxy-patterns/" target="_blank">
-<img src="https://raw.githubusercontent.com/PatrickAlphaC/upgrade-mix/master/img/proxy-pattern.png" width="225" alt="OpenZeppelin Proxy logo">
+<img src="https://raw.githubusercontent.com/PatrickAlphaC/upgrades-mix/main/img/proxy-pattern.png" width="400" alt="OpenZeppelin Proxy logo">
 </a>
 </p>
 <br/>
@@ -56,15 +56,15 @@ yarn add global ganache-cli
 3. Download the mix and install dependancies. 
 
 ```bash
-brownie bake upgrade-mix
-cd upgrade
+brownie bake upgrades-mix
+cd upgrades
 ```
 
 Or, you can clone from source:
 
 ```bash
-git clone https://github.com/PatrickAlphaC/upgrade-mix
-cd upgrade-mix
+git clone https://github.com/PatrickAlphaC/upgrades-mix
+cd upgrades-mix
 ```
 
 ## Environment Variables
@@ -130,7 +130,7 @@ To get started with Brownie:
 * For more in-depth information, read the [Brownie documentation](https://eth-brownie.readthedocs.io/en/stable/).
 * Or watch any of the [Brownie YouTube](https://www.youtube.com/watch?v=QfFO22lwSw4&t=2s) tutorials or [articles](https://alphachain.io/blogs/)
 
-Any questions? Join our [Discord](https://discord.gg/2YHSAey)
+Any questions? Join our [Discord](https://discord.gg/9zk7snTfWe)
 ## License
 
 This project is licensed under the [MIT license](LICENSE).
