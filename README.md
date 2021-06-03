@@ -8,6 +8,17 @@
 </p>
 <br/>
 
+- [Upgrades Mix](#upgrades-mix)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+- [Useage](#useage)
+  - [Scripts](#scripts)
+  - [Test](#test)
+  - [Linting](#linting)
+  - [Resources](#resources)
+  - [License](#license)
+
 This repo shows users how to use the Transparent Proxy pattern for upgrading smart contracts. It uses most of the code from openzeppelin's repo, and adds brownie scripts on top. 
 
 ## Prerequisites
@@ -56,6 +67,7 @@ git clone https://github.com/PatrickAlphaC/upgrade-mix
 cd upgrade-mix
 ```
 
+## Environment Variables
 If you want to be able to deploy to testnets or work with mainnet-fork, do the following. 
 
 1. Set your `WEB3_INFURA_PROJECT_ID`, and `PRIVATE_KEY` [environment variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html). 
@@ -79,6 +91,7 @@ AND THEN RUN `source .env` TO ACTIVATE THE ENV VARIABLES
 Otherwise, you can build, test, and deploy on your local environment. 
 
 # Useage
+## Scripts
 
 ```
 brownie run scripts/01_deploy_box.py
