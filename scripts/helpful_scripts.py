@@ -34,10 +34,11 @@ def encode_function_data(initializer=None, *args):
     Returns:
         [bytes]: Return the encoded bytes.
     """
-    if len(args) == 0 or not initializer:
-        return eth_utils.to_bytes(hexstr="0x")
-    else:
-        return initializer.encode_input(*args)
+    if not len(args): args = b''
+
+    if initializer: return initializer.encode_input(*args)
+
+    return b''
 
 
 def upgrade(
