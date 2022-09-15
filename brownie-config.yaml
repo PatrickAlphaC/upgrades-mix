@@ -8,7 +8,7 @@ dependencies:
 compiler:
   solc:
     remappings:
-      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.1.0'
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.1.0"
 # automatically fetch contract sources from Etherscan
 autofetch_sources: True
 dotenv: .env
@@ -16,7 +16,7 @@ networks:
   default: development
   development:
     verify: False
-  rinkeby:
+  goerli:
     verify: False
   ganache:
     verify: False

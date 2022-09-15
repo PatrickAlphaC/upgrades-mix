@@ -74,7 +74,7 @@ If you want to be able to deploy to testnets or work with mainnet-fork, do the f
 
 You can get a `WEB3_INFURA_PROJECT_ID` by getting a free trial of [Infura](https://infura.io/). At the moment, it does need to be infura with brownie. If you get lost, you can [follow this guide](https://ethereumico.io/knowledge-base/infura-api-key-guide/) to getting a project key. You can find your `PRIVATE_KEY` from your ethereum wallet like [metamask](https://metamask.io/). 
 
-You'll also need testnet rinkeby ETH and LINK. You can get LINK and ETH into your wallet by using the [rinkeby faucets located here](https://docs.chain.link/docs/link-token-contracts#rinkeby). If you're new to this, [watch this video.](https://www.youtube.com/watch?v=P7FX_1PePX0)
+You'll also need testnet goerli ETH and LINK. You can get LINK and ETH into your wallet by using the [goerli faucets located here](https://faucets.chain.link/). If you're new to this, [watch this video.](https://www.youtube.com/watch?v=P7FX_1PePX0)
 
 You can add your environment variables to the `.env` file:
 
