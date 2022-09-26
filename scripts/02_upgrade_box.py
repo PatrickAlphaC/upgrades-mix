@@ -19,9 +19,11 @@ def main():
     )
     proxy = TransparentUpgradeableProxy[-1]
     proxy_admin = ProxyAdmin[-1]
-    upgrade(account, proxy, box_v2, proxy_admin_contract=proxy_admin)
+    upgrade_tx = upgrade(account, proxy, box_v2, proxy_admin_contract=proxy_admin)
+    upgrade_tx.wait(1)
     print("Proxy has been upgraded!")
     proxy_box = Contract.from_abi("BoxV2", proxy.address, BoxV2.abi)
     print(f"Starting value {proxy_box.retrieve()}")
-    proxy_box.increment({"from": account})
+    tx_inc = proxy_box.increment({"from": account})
+    tx_inc.wait(1)
     print(f"Ending value {proxy_box.retrieve()}")
