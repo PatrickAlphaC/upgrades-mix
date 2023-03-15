@@ -16,7 +16,7 @@ networks:
   default: development
   development:
     verify: False
-  goerli:
+  sepolia:
     verify: False
   ganache:
     verify: False
